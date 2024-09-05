@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+    //     function getValue(){
+
+    //         let arr = [2,4,55,77,1,44,75,57,99,6,45,98]
+
+    //         let nums = document.getElementById('value')
+    //         let pos = document.getElementById('pos').value
+    //         let del = document.getElementById('del').value
+
+    //     for(let i = arr.length -1; i>=0; i--){
+
+    //         if(i === parseInt(pos)){
+    //             arr[i] = parseInt(nums.value)
+    //         }
+
+    //     }
+
+    //     arr.splice(3, parseInt(del),786)
+    //     console.log(arr, del)
+    // }
+    
+
+    function delValue(){
+
+        let arr = [2,4,55,1,44,75,57,99,6,45,98]
+
+        for(let i = 3; i < arr.length -1; i++){
+            arr[i] = arr[i + 1]
+            
+        }
+        arr.pop()
+       console.log(arr)
+    }
+
+    function mergeArr(){
+        let arr1 = [1,2,3,4,5]
+        let arr2 = [6,7,8,9,10]
+        let res = []
+        let mergeTwo = []
+
+        for(let i = 0; i < arr1.length; i++){
+            res[i] = arr1[i]
+        }
+        for(let i = 0; i < arr2.length; i++){
+            res[arr1.length + i] = arr2[i]
+        }
+        console.log(res)
+        console.log(arr1.concat(arr2), [...arr1, ...arr2])
+
+    }
+    mergeArr()
+
+    </script>
+
+
+    <input type="text" id="value">
+    <button onclick="getValue()">Get Value</button>
+
+    <input type="text" id="pos">
+    <input type="text" id="del">
+    <button onclick="delValue()">click to del</button>
+
+</body>
+</html>
